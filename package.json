@@ -1,0 +1,13 @@
+{
+  "name": "nest-grafana",
+  "version": "1.0.0",
+  "description": "Tutorial implementation based on: [Monitoring a NestJS Application with Prometheus and Grafana](https://medium.com/@islam.farid16/monitoring-a-nestjs-application-with-prometheus-and-grafana-31436a495d0e)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
