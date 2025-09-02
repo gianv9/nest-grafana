@@ -134,9 +134,15 @@ nest-grafana/
 
 ## 📸 Dashboard Screenshot
 
-![Grafana Dashboard](./grafana-dashboard-example.png)
+![Grafana Dashboard](screenshots/grafana%20enhanced.png)
 
 *The dashboard shows successful monitoring of CPU usage, memory consumption, and application uptime.*
+
+## 🩹 Common Issues
+
+1. **The Dashboard has no info**: This happens because currently the json template in the repo has a fixed id, currently we must manually change the id of the prometheus.
+
+![Grafana Dashboard With Error](screenshots/grafana%20enhanced%20error.png)
 
 ## 📄 License
 
