@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s # set to 5 seconds for faster scraping. Default is 10-15 seconds for prodeuction
+
+scrape_configs:
+  - job_name: 'nestjs-app'
+    static_configs:
+      - targets: ['nest-app:3000']

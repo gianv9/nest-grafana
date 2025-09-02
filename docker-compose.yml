@@ -1,0 +1,41 @@
+services:
+  nest-app:
+    build: ./nest-app
+    container_name: nest-app
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoring
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - monitoring
+    depends_on:
+      - nest-app
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3200:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - monitoring
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+
+networks:
+  monitoring:
+    driver: bridge
+
+volumes:
+  grafana_data:
+  prometheus_data:
