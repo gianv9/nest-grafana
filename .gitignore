@@ -4,3 +4,7 @@ dist/
 *.log
 coverage/
 .nyc_output/
+
+# Personal files
+project_context.md
+CLAUDE.md
